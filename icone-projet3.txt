@@ -1,0 +1,16 @@
+coeur 		<i class="fa-regular fa-heart"></i>  
+
+location 		<i class="fa-solid fa-location-dot"></i>
+
+téléphone 	<i class="fa-solid fa-mobile-screen"></i>
+
+liste 		<i class="fa-solid fa-list"></i>
+
+couverts  	<i class="fa-solid fa-utensils"></i>
+
+boutique  	<i class="fa-solid fa-store"></i>
+
+hands 		<i class="fa-solid fa-handshake-angle"></i>
+
+clic 		<i class="fa-solid fa-circle-check"></i>
+			<i class="fa-regular fa-circle-check"></i>

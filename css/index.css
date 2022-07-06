@@ -1,0 +1,42 @@
+@-webkit-keyframes spinner-fade-out {
+  0% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spinner-fade-out {
+  0% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.spinner {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  opacity: 1;
+  background-color: aqua;
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+  -webkit-animation: spinner-fade-out;
+          animation: spinner-fade-out;
+  -webkit-animation-duration: 1100ms;
+          animation-duration: 1100ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
