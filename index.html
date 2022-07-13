@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div id="logo">
-            <img src="./images/ohmyfood.png" alt="ohmyfood">
+            <img  src="./images/ohmyfood.png" alt="ohmyfood">
         </div>
     </header>
 <main>
@@ -28,7 +28,7 @@
         <div class="slogan">
             <h1>Réservez le menu qui vous convient</h1>
             <p class="slogan-subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-            <button class="search-btn" id="search-btn">Explorer nos restaurants</button>
+            <button class="search-btn">Explorer nos restaurants</button>
         </div>
         
     </section>
@@ -36,70 +36,91 @@
     <aside>
         <h2>Fonctionnement</h2>
         <div class="function">
+            <span>1</span>
             <div class="both">
-                <span>1</span>
                 <i class="fa-solid fa-mobile-screen"></i>
                 <h3>Choisissez un restaurant</h3>
             </div>
         </div>
+
         <div class="function">
+            <span>2</span>
             <div class="both">
-                <span>2</span>
                 <i class="fa-solid fa-list"></i>
                 <h3>Composez votre menu</h3>
             </div>
         </div>
+
         <div class="function">
+            <span>3</span>
             <div class="both">
-                <span>3</span>
                 <i class="fa-solid fa-store"></i>
                 <h3>Dégustez au restaurant</h3>
             </div>
         </div>
     </aside>
 
-    <section>
+    <section class="cards-index">
         <h3>Restaurants</h3>
         <div class="card">
             <a href="la-palette-du-gout.html" class="lien">
-                <img src="./images/palette-du-gout.jpg" alt="La palette du goût"/>
+                <img class="image" src="./images/palette-du-gout.jpg" alt="La palette du goût"/>
                 <div class="card-content">
-                    <h3>La palette du goût</h3>
-                    <p>Ménilmontant</p>
-                    <i class="fa-regular fa-heart"></i>
+                    <div class="card-content-text">
+                        <h3>La palette du goût</h3>
+                        <p>Ménilmontant</p>
+                    </div>
+               
+                    <div class="card-content-i">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
                 </div>
             </a>
         </div>
 
         <div class="card">
             <a href="note-enchante.html" class="lien">
-                <img src="./images/note-enchantee.jpg" alt="La note enchantée"/>
+                <img class="image" src="./images/note-enchantee.jpg" alt="La note enchantée"/>
                 <div class="card-content">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
-                    <i class="fa-regular fa-heart"></i>
+                    <div class="card-content-text">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                    </div>
+                    <div class="card-content-i">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
                 </div>
             </a>
         </div>
 
         <div class="card">
             <a href="a-la-francaise.html" class="lien">
-                <img src="./images/a-la-francaise.jpg" alt="&Agrave; la française"/>
+                <img class="image" src="./images/a-la-francaise.jpg" alt="&Agrave; la française"/>
                 <div class="card-content">
-                    <h3>&Agrave; la française</h3>
-                    <p>Cité Rouge</p>
-                    <i class="fa-regular fa-heart"></i>
+                    <div class="card-content-text">
+                        <h3>&Agrave; la française</h3>
+                        <p>Cité Rouge</p>
+                    </div>
+               
+                    <div class="card-content-i">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
                 </div>
             </a>
         </div>
 
         <div class="card">
             <a href="delice-des-sens.html" class="lien">
-                <img src="./images/delice-des-sens.jpg" alt="Le délice des sens"/>
+                <img class="image" src="./images/delice-des-sens.jpg" alt="Le délice des sens"/>
                 <div class="card-content">
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
-                    <i class="fa-regular fa-heart"></i>
+                    <div class="card-content-text">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                    </div>
+               
+                    <div class="card-content-i">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
                 </div>
             </a>
         </div>
@@ -108,7 +129,7 @@
 </main>
 
     <footer class="footer">
-        <h4 class="logo">ohmyfood</h4>
+        <h3 class="logo">ohmyfood</h3>
         <a href="#" class="lien">
             <i class="fa-solid fa-utensils"></i>
             <h4>Proposer un restaurant</h4>
