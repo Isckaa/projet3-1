@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
     <script src="https://kit.fontawesome.com/c9bc7f9808.js" crossorigin="anonymous"></script>
     <title>Oh my food</title>
@@ -16,8 +16,10 @@
             <img  src="./images/ohmyfood.png" alt="ohmyfood">
         </div>
     </header>
+
 <main>
-    <section>
+    
+    <section class="nav">
         <div class="search-bar">
             <div class="search-icone">
                 <i class="fa-solid fa-location-dot"></i>
@@ -33,7 +35,7 @@
         
     </section>
 
-    <aside>
+    <aside class="fonctionnement">
         <h2>Fonctionnement</h2>
         <div class="function">
             <span>1</span>
@@ -61,34 +63,33 @@
     </aside>
 
     <section class="cards-index">
-        <h3>Restaurants</h3>
+        <h2>Restaurants</h2>
         <div class="card">
             <a href="la-palette-du-gout.html" class="lien">
                 <img class="image" src="./images/palette-du-gout.jpg" alt="La palette du goût"/>
-                <div class="card-content">
-                    <div class="card-content-text">
+                <div class="card-content"> 
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
-                    </div>
-               
-                    <div class="card-content-i">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
-                </div>
+                        <i class="fa-solid fa-heart heart-full"></i>  
+                        <i class="fa-regular fa-heart heart-stroke"></i>    
+                        
+                </div>  
             </a>
         </div>
 
         <div class="card">
             <a href="note-enchante.html" class="lien">
-                <img class="image" src="./images/note-enchantee.jpg" alt="La note enchantée"/>
+                <div class="image">
+                    <img src="./images/note-enchantee.jpg" alt="La note enchantée"/>
+                    <div class="new"></div>
+                </div>
                 <div class="card-content">
-                    <div class="card-content-text">
+                    
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
-                    </div>
-                    <div class="card-content-i">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
+                        <i class="fa-solid fa-heart heart-full"></i>  
+                        <i class="fa-regular fa-heart heart-stroke"></i>
+                    
                 </div>
             </a>
         </div>
@@ -97,14 +98,13 @@
             <a href="a-la-francaise.html" class="lien">
                 <img class="image" src="./images/a-la-francaise.jpg" alt="&Agrave; la française"/>
                 <div class="card-content">
-                    <div class="card-content-text">
+                    
                         <h3>&Agrave; la française</h3>
                         <p>Cité Rouge</p>
-                    </div>
-               
-                    <div class="card-content-i">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
+                        <i class="fa-solid fa-heart heart-full"></i>  
+                        <i class="fa-regular fa-heart heart-stroke"></i>
+                    
+                    
                 </div>
             </a>
         </div>
@@ -113,14 +113,13 @@
             <a href="delice-des-sens.html" class="lien">
                 <img class="image" src="./images/delice-des-sens.jpg" alt="Le délice des sens"/>
                 <div class="card-content">
-                    <div class="card-content-text">
+                    
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
-                    </div>
-               
-                    <div class="card-content-i">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
+                        <i class="fa-solid fa-heart heart-full"></i>  
+                        <i class="fa-regular fa-heart heart-stroke"></i>
+                    
+                    
                 </div>
             </a>
         </div>
