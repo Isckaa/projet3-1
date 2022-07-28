@@ -128,8 +128,8 @@ a {
 .scroll-1 {
   opacity: 1;
   transition-duration: 3000ms;
-  -webkit-animation-delay: 1;
-          animation-delay: 1;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes scroll-1 {
@@ -200,7 +200,7 @@ a {
 }
 /*check dans le menu*/
 .check {
-  display: none;
+  opacity: 0;
 }
 
 @-webkit-keyframes check-turn {
@@ -272,13 +272,13 @@ button:hover {
      object-fit: cover;
 }
 .card .new {
-  display: block;
-  content: "NEW";
-  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
   height: 30px;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  transform: translate(280px, -160px);
   color: white;
   background-color: #99E2D0;
 }
@@ -297,10 +297,11 @@ button:hover {
   border: 2px;
   border-radius: 20px;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.25s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 .cards-index .card:hover {
   transform: scale(1.01);
+  box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.461);
 }
 .cards-index .card-content {
   position: relative;
@@ -324,14 +325,18 @@ button:hover {
   transform: translateY(-50%);
 }
 .cards-index .card .heart-full {
-  background-image: linear-gradient(#ff79da, #9356dc);
   color: transparent;
+  background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
 }
 .cards-index .card .heart-stroke {
   opacity: 1;
   background-color: white;
+  transition: 0.3s;
+}
+.cards-index .card .heart-stroke:hover {
+  opacity: 0;
 }
 .cards-index .card .heart-stroke:hover {
   opacity: 0;
@@ -360,13 +365,13 @@ button:hover {
 }
 
 .header {
-  width: 100%;
-  height: 55px;
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.189);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 55px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.189);
+  background-color: #fff;
 }
 .header #logo {
   display: flex;
@@ -448,6 +453,7 @@ button:hover {
   border-radius: 25px;
   background-color: #f6f6f6;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
 }
 .fonctionnement .function .both:hover {
   background-color: rgba(146, 86, 220, 0.1843137255);
@@ -457,19 +463,19 @@ button:hover {
 }
 
 .search-bar {
-  background-color: #eaeaea;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 45px;
   gap: 35px;
+  background-color: #eaeaea;
 }
 .search-bar input {
-  border: none;
-  background-color: #eaeaea;
   display: flex;
   font-size: medium;
   font-weight: bold;
+  border: none;
+  background-color: #eaeaea;
 }
 .search-bar input:focus {
   outline: none;
@@ -498,7 +504,7 @@ button:hover {
 .restaurant-img {
   width: 100%;
 }
-.restaurant-content {
+.restaurant-title {
   position: relative;
   width: 100%;
   height: 60px;
@@ -508,20 +514,29 @@ button:hover {
   transform: translateY(-30px);
   background-color: #fff;
 }
-.restaurant-content h1 {
+.restaurant-title h1 {
   font-family: "Shrikhand", cursive;
   font-weight: 300;
 }
-.restaurant-content i {
+.restaurant-title i {
   position: absolute;
-  transform: translateX(380px) translateY(-30px);
+  right: 15px;
+  top: 20px;
   font-size: x-large;
 }
-.restaurant-content .full {
+.restaurant-title .heart-full {
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
   -webkit-background-clip: text;
-          background-clip: text;
+}
+.restaurant-title .heart-stroke {
+  opacity: 1;
+  background-color: white;
+  transition: 0.3s;
+}
+.restaurant-title .heart-stroke:hover {
+  opacity: 0;
 }
 .restaurant-menu {
   display: flex;
@@ -529,11 +544,6 @@ button:hover {
   justify-content: center;
   width: 100%;
   background-color: #fff;
-}
-.restaurant-menu .search-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .restaurant-menu .menu {
   display: flex;
@@ -559,49 +569,67 @@ button:hover {
 }
 .restaurant-menu .menu-card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   flex-direction: row;
-  width: auto;
+  width: 100%;
   height: 80px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: white;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-}
-.restaurant-menu .menu-card h3 {
-  padding-left: 10px;
-  font-weight: 900;
-}
-.restaurant-menu .menu-card p {
-  padding-left: 10px;
-}
-.restaurant-menu .menu-card .price {
-  transform: translateY(25px) translateX(-15px);
-  margin-right: 0;
-  font-weight: bolder;
+  text-overflow: ellipsis;
+  position: relative;
 }
 .restaurant-menu .menu-card:hover .check {
+  width: 50px;
+  opacity: 1;
+}
+.restaurant-menu .menu-card .menu-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
+  width: 90%;
   height: 100%;
-  font-size: xx-large;
-  background-color: #99E2D0;
-  color: #fff;
+  padding: 15px;
+  flex-direction: column;
+  text-align: start;
 }
-.restaurant-menu .menu-card:hover i {
-  -webkit-animation: check-turn 450ms;
-          animation: check-turn 450ms;
+.restaurant-menu .menu-card .menu-content h3, .restaurant-menu .menu-card .menu-content p {
+  width: 100%;
+  font-weight: 900;
+  padding-bottom: 5px;
 }
-
-.stroke {
-  opacity: 1;
-  background-color: white;
+.restaurant-menu .menu-card .menu-content p {
+  font-weight: 100;
 }
-.stroke:hover {
+.restaurant-menu .menu-card .price {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(17px, 17px);
+}
+.restaurant-menu .menu-card .check {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
   opacity: 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 0%;
+  transform: translateX(360px) translateY(-100%);
+}
+.restaurant-menu .menu-card .check i {
+  font-size: x-large;
+}
+.restaurant .search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=index.css.map */

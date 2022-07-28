@@ -21,11 +21,11 @@
 }
 
 
-.restaurant {
+.restaurant { 
   &-img{
     width: 100%;
   }
-  &-content{
+  &-title{
     position: relative;
     width: 100%;
     height: 60px;
@@ -40,13 +40,15 @@
     }
     & i{
       position: absolute;
-      transform: translateX(380px) translateY(-30px);
+      right: 15px;
+      top : 20px;
       font-size: x-large;
     }
-    .full{
-      color: transparent;
-      background-image: linear-gradient($pink, $purple);
-      background-clip: text;
+    .heart-full{
+      @include heart-full;
+    }
+    .heart-stroke{
+      @include heart-stroke;
     }
   }
   &-menu {
@@ -55,9 +57,6 @@
     justify-content: center;
     width: 100%;
     background-color:  $header;
-    & .search-btn{
-      @include flexbox;
-    }
     & .menu{
       display: flex;
       flex-direction: column;
@@ -79,58 +78,81 @@
           background-color: $green;
         }
       }
+
       &-card {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         flex-direction: row;
-        width: auto;         
+        width: 100%;         
         height: 80px;
         margin-top: 10px;
         margin-bottom: 10px;
-        border-radius: 20px;
+        border-radius: 25px;
         background-color: white; 
         box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
         overflow: hidden;
-        & h3{
-          padding-left: 10px;
-          font-weight: 900;
+        text-overflow: ellipsis;
+        position: relative;
+        &:hover{
+          .check{
+            width: 50px;
+            opacity: 1;
+          }
         }
-        & p{
-          padding-left: 10px
+        
+        & .menu-content{
+          @include flexbox;
+          width: 90%;
+          height: 100%;
+          padding: 15px;
+          flex-direction: column;
+          text-align: start;
+          & h3, p{
+          width: 100%;
+          font-weight: 900;
+          padding-bottom: 5px;
+          }
+          & p{
+            font-weight: 100;
+          }
         }
         & .price{
-          transform: translateY(25px) translateX(-15px);
-          margin-right: 0;
-          font-weight: bolder; 
+          width: 100px;
+          height: 100%;
+          @include flexbox;
+          transform: translate(17px, 17px)
         }
-        &:hover{
-          .check {
-            @include flexbox; 
-            width: 70px;
-            height: 100%;
-            font-size: xx-large;
-            background-color: $green;
-            color: #fff;          
-          } 
+        
+        & .check{
+          position: absolute;
+          @include flexbox;
+          right: 0;
+          opacity: 0;
+          background-color: $green;
+          height: 100%;
+          width: 0%;
+          transform: translateX(360px) translateY(-100%);
           & i{
-            animation: check-turn 450ms;
-          }  
+            font-size: x-large;
+          }
         }
-      } 
-    }
+      
+      
+      }
+    } 
+  }
+  
+  & .search-btn{
+    @include flexbox;
   }
 }
+
+
 
 
       
-.stroke{
-  opacity: 1;
-  background-color: white;
-  &:hover{
-    opacity: 0;
-  }
-}
+
   
 
            

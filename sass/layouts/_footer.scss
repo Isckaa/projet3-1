@@ -4,27 +4,21 @@
   display: flex;
   flex-direction: column;
   gap:20px;
-
   width: 100%;
   height: 250px;
-
   padding: 30px;
   margin-top: 40px;
-
   background-color: $footer;
   color: $header;
-
   & .logo{
     font-family: Shrikhand, serif;
     font-size: x-large;
   }
-
   & .lien{
     display: flex;
     font-size: medium;
     color: white;
   }
-
   & i{
     padding-right: 10px;
   }
