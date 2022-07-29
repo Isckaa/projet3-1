@@ -94,53 +94,10 @@
   }
 }
 
-.scroll-1{
-  opacity: 1;
-  transition-duration: 3000ms;
-  animation-delay: 1s;
-}
-@keyframes scroll-1{
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
-.scroll-2{
-  opacity: 1;
-  transition-duration: 3000ms;
-  animation-delay: 2s;
-}
-@keyframes scroll-2{
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
-.scroll-3{
-  opacity: 1;
-  animation-duration: 6s;
-  animation-delay: 4s;
-}
-@keyframes scroll-3{
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+/*check dans le menu*/
 
-/*check dans le menu*/ 
-
-.check{
-    opacity: 0;
-}
 @keyframes check-turn{
   0% {
     transform: rotate(180deg);
@@ -160,3 +117,45 @@
   }
 }
   
+
+@keyframes animation-scroll{
+  0% {
+    opacity: 0;
+    transform : translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform : translateY(0px);
+  }
+}
+
+.scroll {
+  opacity: 0;
+  transform : translateY(50px);
+  animation : animation-scroll 2s forwards;
+}
+
+.restaurant-menu {
+  @for $i from 1 through 3 {
+    .menu:nth-child(#{$i}) {
+      animation-delay: ($i*1000)+ms;
+    }
+  }
+}
+
+/*
+.scroll-1{
+  animation-duration: 3s;
+  animation-delay: 0.1s;
+}
+
+.scroll-2{
+  animation-duration: 3s;
+  animation-delay: 3s;
+}
+
+.scroll-3{
+  animation-duration: 3s;
+  animation-delay: 6s;
+}
+*/

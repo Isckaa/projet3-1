@@ -1,3 +1,8 @@
+$_check_width : 80;
+$_price_width : 50;
+$check_width : ($_check_width)+px;
+$check_width2 : ($_check_width+50)+px;
+$price_width : ($_price_width)+px;
 
 /*pages restaurants*/
 
@@ -44,12 +49,6 @@
       top : 20px;
       font-size: x-large;
     }
-    .heart-full{
-      @include heart-full;
-    }
-    .heart-stroke{
-      @include heart-stroke;
-    }
   }
   &-menu {
     display: flex;
@@ -80,61 +79,81 @@
       }
 
       &-card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        width: 100%;         
+        display : flex;
+        width: 100%;
         height: 80px;
         margin-top: 10px;
         margin-bottom: 10px;
         border-radius: 25px;
+        padding-left : 15px;
         background-color: white; 
         box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
         overflow: hidden;
-        text-overflow: ellipsis;
         position: relative;
+
         &:hover{
           .check{
-            width: 50px;
+            width: $check_width;
             opacity: 1;
+           
+            & i{
+              opacity : 1;
+              font-size: xx-large;
+              animation: check-turn 0.3s ease-in-out forwards;
+              animation-delay: .1s;
+              
+            }
+          }
+          &>.menu-content {
+            width: calc(100% - $check_width2);
           }
         }
         
         & .menu-content{
           @include flexbox;
-          width: 90%;
+          width: calc(100% - $price_width);
           height: 100%;
-          padding: 15px;
           flex-direction: column;
           text-align: start;
+          transition : width 0.3s ease-in-out;
           & h3, p{
-          width: 100%;
-          font-weight: 900;
-          padding-bottom: 5px;
+            width: 100%;
+            font-weight: 900;
+            padding-bottom: 5px;
+            padding-right : 5px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow : hidden;
           }
           & p{
             font-weight: 100;
           }
         }
         & .price{
-          width: 100px;
+          width: $price_width;
           height: 100%;
-          @include flexbox;
-          transform: translate(17px, 17px)
+          font-weight: 900;
+          display : flex;
+          flex-direction :column;
+          justify-content: end;
+          padding-bottom: 15px;
         }
         
         & .check{
           position: absolute;
+          right : 0;
+          top :0;
           @include flexbox;
-          right: 0;
-          opacity: 0;
+          
           background-color: $green;
           height: 100%;
-          width: 0%;
-          transform: translateX(360px) translateY(-100%);
+          width: 0px;
+          transition : width 0.3s ease-in-out;
           & i{
-            font-size: x-large;
+            font-size: xx-large;
+            color: white;
+            opacity : 0;
+            transition : opacity 0.2s;
           }
         }
       

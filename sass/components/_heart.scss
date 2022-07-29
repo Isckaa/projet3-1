@@ -1,0 +1,9 @@
+.heart-full{
+    @include heart-full;
+}
+.heart-stroke{
+    @include heart-stroke;
+    &:hover{
+        opacity: 0;
+    }
+}

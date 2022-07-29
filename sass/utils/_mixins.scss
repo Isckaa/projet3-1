@@ -14,7 +14,7 @@
 @mixin heart-stroke{
     opacity: 1;
     background-color: white;
-    transition: .3s;
+    transition: opacity .3s;
     &:hover{
         opacity: 0;
     } 
