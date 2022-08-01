@@ -18,8 +18,18 @@
     display: flex;
     font-size: medium;
     color: white;
+    &:hover{
+      text-decoration: underline;
+    }
   }
   & i{
     padding-right: 10px;
+    :hover{
+      text-decoration: none;
+    }
+  }
+  & .footer-lien{
+    display: flex;
+    flex-direction: row;
   }
 }

@@ -385,8 +385,18 @@ button:hover {
   font-size: medium;
   color: white;
 }
+.footer .lien:hover {
+  text-decoration: underline;
+}
 .footer i {
   padding-right: 10px;
+}
+.footer i :hover {
+  text-decoration: none;
+}
+.footer .footer-lien {
+  display: flex;
+  flex-direction: row;
 }
 
 .fonctionnement {
