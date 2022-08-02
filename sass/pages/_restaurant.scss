@@ -168,7 +168,40 @@
 
       
 
+@media screen and (min-width: 640px){
+
+  .header-menu { 
+    & .logo{
+      width: 100%;
+      text-align: center
+    }
+  }
+
+  .restaurant{
+     @include flexbox;
+     flex-direction: column;
+     background-color: $header;
+     padding: 30px;
+    & .restaurant-img{
+      border-radius: 20px;
+      height: 400px;
+      width: 800px;
+    }
+    &-menu{
+      flex-direction: row;
+      background-color: $bg-grey;
+      border-radius: 0 0 30px 30px;
+    }
+    &-title{
+      @include flexbox;
+      background-color: $bg-grey;
+    }
+    & .scroll{
+      background-color: $bg-grey;
+    }
+  }
   
+}
 
            
 
