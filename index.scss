@@ -2,9 +2,10 @@
 
 @import './sass/utils/variables';
 @import './sass/utils/animations';
-@import './sass/utils/functions';
+// @import './sass/utils/functions';
 @import './sass/utils/mixins';
 
+@import './sass/components/utils';
 @import './sass/components/button';
 @import './sass/components/card';
 @import './sass/components/heart';

@@ -1,76 +1,81 @@
-.fonctionnement {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  
+.fonctionnement{
+  width : 100%;
   height: 400px;
-  padding: 30px;
-  & h2{
+  
+  &-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+  }
+
+  &-title{
     display: flex;
     font-weight: 900;
   }
+
   & .function-box{
     @include flexbox;
     flex-direction: column;
     gap: 20px;
+
     & .function{
-    @include flexbox;
-    flex-direction: row;
-    width: 100%;  
-    & span{
       @include flexbox;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      z-index: 1;
-      background-color: $purple;
-      color: white;
-      font-size: small;
-      font-weight: 400;
-    }
-    & .both{
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
       flex-direction: row;
-      width: 100%;
-      height: 75px;
-      gap: 30px;
-      padding: 25px;
-      padding-left : 30px;
-      margin-left: -10px;
-      border-radius: 25px;
-      background-color: $bg-grey;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-      transition: .2s;
-      &:hover{
-        background-color: #9256dc2f;   
-        & i{
-          color: #9356dc;
+      width: 100%;  
+      & span{
+        @include flexbox;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        z-index: 1;
+        background-color: $purple;
+        color: white;
+        font-size: small;
+        font-weight: 400;
+      }
+      & .both{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 100%;
+        height: 75px;
+        gap: 30px;
+        padding: 25px;
+        padding-left : 30px;
+        margin-left: -10px;
+        border-radius: 25px;
+        background-color: $bg-grey;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        transition: .2s;
+        &:hover{
+          background-color: #9256dc2f;   
+          & i{
+            color: #9356dc;
+          }
         }
       }
-    }
-  }
-  
+    } 
   }
 }
 
 
 
-@media screen and (min-width: 640px){
+@media screen and (min-width: 680px){
 
- .fonctionnement {
-        display: flex;
-        height: 200px;
-        & .function-box{
-            flex-direction: row;
-            justify-content: space-around;
-            & .function{
-                width: 350px;
-            }
+ .fonctionnement{
+    display: flex;
 
-        }
+    height: 200px;
+    & .function-box{
+      flex-direction: row;
+      justify-content: space-around;
+      & .function{
+        width: 350px;
+      }
     }
-
+  }
 }
 

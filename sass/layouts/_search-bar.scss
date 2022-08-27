@@ -1,8 +1,11 @@
 .search-bar{
-  @include flexbox;
-  height: 45px;
-  gap: 35px;
+  width :100%;
   background-color: $input;
+  &-wrapper {
+    @include flexbox;
+    height: 45px;
+    gap: 35px;
+  }
   & input{
     display: flex;
     font-size: medium;

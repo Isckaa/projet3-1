@@ -2,39 +2,42 @@
 
 /*pages restaurants*/
 
-.header-menu { 
-  display: flex;
-  align-items: center;
+.header-menu{ 
+  @include flexbox;
   width: 100%;
   height: 50px;
-  padding: 10px;
+  position: relative;
   & i{
-    padding: 10px;
-    font-size: larger;
+  width: 100%;
+   padding: 10px;
+   font-size: x-large;
   }
   & .logo{
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     font-family: 'Shrikhand', serif;
     font-size: xx-large; 
   }
 }
 
-
-.restaurant { 
+.restaurant{ 
   &-img{
     width: 100%;
+    height: 300px;
+    object-fit: cover;
   }
   &-title{
+    display: flex;
+    align-items: center;
     position: relative;
     width: 100%;
-    height: 60px;
+    height: 90px;
     border-radius: 30px 30px 0 0 ;
     padding: 20px;
     margin-bottom: -30px;
     transform: translateY(-30px);
-    background-color:   $header;
+    background-color: $header;
     & h1{
       font-family: 'Shrikhand', cursive;
       font-weight: 300;
@@ -42,15 +45,15 @@
     & i{
       position: absolute;
       right: 15px;
-      top : 20px;
-      font-size: x-large;
+      font-size: xx-large;
     }
   }
-  &-menu {
+  &-menu{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin-bottom: 20px;
     background-color:  $header;
     & .menu{
       display: flex;
@@ -63,7 +66,7 @@
         margin-top: 30px;
         padding-bottom: 7px;
         font-size: larger; 
-        &:after {
+        &:after{
           content : "";
           position : absolute;
           left : 0;
@@ -73,38 +76,33 @@
           background-color: $green;
         }
       }
-
-      &-card {
+      &-card{
         display : flex;
+        position: relative;
         width: 100%;
         height: 80px;
         margin-top: 10px;
         margin-bottom: 10px;
         border-radius: 25px;
         padding-left : 15px;
+        overflow: hidden;
         background-color: white; 
         box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        position: relative;
-
         &:hover{
           .check{
             width: $check_width;
             opacity: 1;
-           
             & i{
               opacity : 1;
               font-size: xx-large;
               animation: check-turn 0.3s ease-in-out forwards;
               animation-delay: .1s;
-              
             }
           }
-          &>.menu-content {
+          &>.menu-content{
             width: calc(100% - $check_width2);
           }
         }
-        
         & .menu-content{
           @include flexbox;
           width: calc(100% - $price_width);
@@ -114,36 +112,34 @@
           transition : width 0.3s ease-in-out;
           & h3, p{
             width: 100%;
-            font-weight: 900;
             padding-bottom: 5px;
             padding-right : 5px;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow : hidden;
+            font-weight: 900;
           }
           & p{
             font-weight: 100;
           }
         }
         & .price{
-          width: $price_width;
-          height: 100%;
-          font-weight: 900;
           display : flex;
           flex-direction :column;
           justify-content: end;
+          width: $price_width;
+          height: 100%;
           padding-bottom: 15px;
+          font-weight: 900;
         }
-        
         & .check{
+          @include flexbox;
           position: absolute;
           right : 0;
           top :0;
-          @include flexbox;
-          
-          background-color: $green;
           height: 100%;
           width: 0px;
+          background-color: $green;
           transition : width 0.3s ease-in-out;
           & i{
             font-size: xx-large;
@@ -152,60 +148,57 @@
             transition : opacity 0.2s;
           }
         }
-      
-      
       }
     } 
   }
-  
-  & .search-btn{
-    @include flexbox;
+  &-order{
+    margin-bottom : 30px;
   }
-}
+}    
 
 
-
-
-      
 
 @media screen and (min-width: 640px){
 
-  .header-menu { 
-    & .logo{
-      width: 100%;
-      text-align: center
-    }
-  }
+
 
   .restaurant{
-     @include flexbox;
-     flex-direction: column;
-     background-color: $header;
-     padding: 30px;
-    & .restaurant-img{
+    @include flexbox;
+    flex-direction: column;
+    background-color: $header;
+    padding: 30px;
+    background-color: none;
+    &-wrapper{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    &-img{
       border-radius: 20px;
       height: 400px;
       width: 800px;
     }
+    &-title{
+      display: flex;
+      justify-content: center;
+      
+      
+      & i{      
+        position: absolute;
+        right: 15%;
+      }
+    }
     &-menu{
       flex-direction: row;
-      background-color: $bg-grey;
+      flex-wrap : wrap;
+      
       border-radius: 0 0 30px 30px;
-    }
-    &-title{
-      @include flexbox;
-      background-color: $bg-grey;
-    }
-    & .scroll{
-      background-color: $bg-grey;
+      .menu{
+        
+        min-width : 300px;
+        width : calc(32% - 33px);
+      }
     }
   }
-  
 }
-
-           
-
-
-
-  
-  
