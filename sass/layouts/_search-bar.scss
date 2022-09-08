@@ -3,6 +3,7 @@
   background-color: $input;
   &-wrapper {
     @include flexbox;
+    flex-wrap: wrap;
     height: 45px;
     gap: 35px;
   }
