@@ -341,6 +341,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: calc(100% - 60px);
   gap: 35px;
 }
 .slogan-title {
@@ -551,6 +552,7 @@ button:hover {
 }
 .restaurant-title h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 30px;
   font-weight: 300;
 }
 .restaurant-title i {

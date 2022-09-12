@@ -6,7 +6,7 @@
     margin : 0 auto;
     @include flexbox;
     flex-direction: column;
-    width : calc(100%-60px);
+    width : calc(100% - 60px);
     gap: 35px;
   }
 
