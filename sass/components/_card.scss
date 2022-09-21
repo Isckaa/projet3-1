@@ -1,13 +1,16 @@
+.cards-title{
+  width: 100%;
+  
+}
 .cards{
-  width : calc(100% - 60px);
+  width : 100%;
   background-color: $bg-grey;
-  margin : 30px;
+  
   
   &-wrapper {
     @include flexbox;
     flex-direction: column;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding : 30px
   }
 
   @media screen and (min-width: 640px){
@@ -18,7 +21,8 @@
     @include flexbox;
     flex-direction: column;
     width: 100%;
-    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     gap: 25px;
     
     @media screen and (min-width: 640px){
@@ -45,7 +49,7 @@
         object-fit: cover;
       }
       &-new::after{
-        content:'nouveau';
+        content:'Nouveau';
         @include flexbox;
         width : 90px;
         height : 30px;
@@ -64,11 +68,11 @@
         gap:6px;
 
         & h3{
-          font-weight: bolder;
+          font-weight: bold;
         }
 
         & p{
-          font-weight: 100;
+          font-weight: lighter;
         }
 
         & i{
